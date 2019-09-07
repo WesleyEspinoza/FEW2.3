@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+isport React, { Component } from 'react';
 import Button from './Button'
 import Product from './Product'
 import inventory, { categories } from './inventory'
