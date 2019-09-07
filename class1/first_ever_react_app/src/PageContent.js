@@ -2,16 +2,47 @@ import React from 'react'
 import './css/App.css';
 import Project from './Project';
 
-function PageContent() {
-  return (
-  <div className="PageContent">
-      <Project title="Tetris Dots" image="/python.png" link="#" />
-      <Project title="Zombie Server" image="/iphone.png" link="#" />
-      <Project title="Amazing Colors" image="/js.png" link="#" />
-      <Project title="Flip Toggle" image="/android.png" link="#" />
-      <Project title="121 Second St" image="/iphone.png" link="#" />
-      <Project title="Slide Shows" image="/android.png" link="#" />
-  </div>);
+class PageContent extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      data: null
+    }
+  }
+  
+  componentDidMount() {
+    this.fetchUser()
+  }
+
+  fetchUser() {    
+    fetch('https://api.github.com/users/WesleyEspinoza/repos')
+  .then(response => response.json())
+  .then((data) =>{
+    this.setState({ data });
+    });
+  }
+
+  render(){
+    var projects = []
+    if(this.state && this.state.data){
+      projects = this.state.data.map(({id, name, language, html_url}, index) => {
+        return (
+          <Project key={`project-${id}`} title={name} language={language} link={html_url} />
+        )
+
+  
+        
+      });
+    }
+    
+
+    return (
+      <ul className="PageContent">
+                <div>{projects}</div>
+      </ul>
+      );
+  }
+
 }
 
 export default PageContent;

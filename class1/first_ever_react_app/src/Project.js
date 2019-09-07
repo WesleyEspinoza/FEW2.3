@@ -1,17 +1,47 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card'
 import "./css/Project.css"
 
-function Project({ image, title, link }) {
-  return (
-    <Card className="Project" style={{ width: '15rem', height: '12rem', background: 'rgba(46, 51, 56, 0.2)' }}>
-    <Card.Img variant="top" src={image} style={{ width: '5rem', height: '5rem'}} />
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Link href={link}>Link to project</Card.Link>
-      </Card.Body>
-    </Card>
-  ) 
+
+class Project extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      image: '/python.png'
+    }
+  }
+
+  componentDidMount() {
+    switch(this.props.language) {
+      case 'Swift':
+        this.setState({image: '/iphone.png'})
+        break;
+      case 'JavaScript':
+        this.setState({image: '/js.png'})
+        break;
+      case 'Python':
+        this.setState({image: '/python.png'})
+        break;
+      case 'Kotlin':
+        this.setState({image: '/android.png'})
+        break;
+      default:
+        // code block
+    }
+  }
+
+  render(){
+    return (
+      <div className='p'>
+        <div className='card'>
+        <h1>{this.props.title}</h1>
+        <h2>{<img src={this.state.image} />}</h2>
+        <a href={this.props.link}>Link to project</a>
+        </div>
+  
+      </div>
+    ) 
+  }
 }
+
 
 export default Project

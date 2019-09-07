@@ -2,12 +2,11 @@
   text-align: center;
 }
 .PageContent {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 25px;
+    background-color: rgba(255, 255, 255, 0.0);
+    justify-content: center; 
 }
 
 .image {

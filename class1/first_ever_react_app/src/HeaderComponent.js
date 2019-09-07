@@ -4,7 +4,7 @@ import './css/HeaderComponent.css'
 function HeaderComponent() {
   //logic
   return (
-    <div className="SimpleComponent">
+    <div className="HeaderComponent">
       <header>
       <h1>Erick Wesley Espinoza</h1>
       </header>
