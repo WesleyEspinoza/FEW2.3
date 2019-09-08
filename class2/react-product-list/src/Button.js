@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css';
+import Counter from './Counter'
 
 class Button extends React.Component {
 
@@ -23,7 +24,7 @@ class Button extends React.Component {
             this.setState({selected: false})
           }
         }}>
-          {this.props.item}
+          {this.props.item} <Counter data={this.props.data} item={this.props.item}/>
         </button >
     );
 

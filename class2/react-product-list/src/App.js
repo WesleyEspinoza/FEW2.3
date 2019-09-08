@@ -1,4 +1,4 @@
-isport React, { Component } from 'react';
+import React, { Component } from 'react';
 import Button from './Button'
 import Product from './Product'
 import inventory, { categories } from './inventory'
@@ -37,7 +37,8 @@ class App extends Component {
           key={`button-${index}`}
           index={index} 
           item={item} 
-          app={this} 
+          app={this}
+          data={inventory}
           setCategory={() => {
           this.setState((state) => {
             var categories_selected = state.categories_selected
@@ -68,7 +69,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Show products here</h1>
+        <h1>Select categories of interest</h1>
         <h2>
           {cats_string}
         </h2>
