@@ -24,6 +24,9 @@ class Project extends React.Component {
       case 'Kotlin':
         this.setState({image: '/android.png'})
         break;
+        case 'C++':
+          this.setState({image: '/c++.png'})
+          break;
       default:
         // code block
     }

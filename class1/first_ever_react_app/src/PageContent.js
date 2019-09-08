@@ -37,9 +37,10 @@ class PageContent extends React.Component {
     
 
     return (
-      <ul className="PageContent">
-                <div>{projects}</div>
-      </ul>
+      <div className="PageContent">
+        {projects}
+
+      </div>
       );
   }
 
