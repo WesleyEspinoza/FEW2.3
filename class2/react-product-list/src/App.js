@@ -69,22 +69,24 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Select categories of interest</h1>
+        <input className="cart" type="image" id="myimage" src="./cart.png" />
+        <h1>Select categories of interest </h1> 
+
         <h2>
           {cats_string}
         </h2>
         
-          <ul className="grid-container">
+          <div className="grid-container">
             <div className = "Buttons">
               {buttons}
             </div>
 
-            </ul>
+            </div>
       
 
-        <ul className="grid-container">
+        <div className="grid-container">
           {products}
-        </ul>
+        </div>
 
       </div>
     );

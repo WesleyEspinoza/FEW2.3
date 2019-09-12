@@ -19,12 +19,23 @@
   width: 200px;
 }
 
+.counter{
+  display: inline-block;
+  margin-left: 5px;
+  height: 30px;
+  width: 30px;
+  background-color:  rgb(66, 66, 66);
+  border-radius: 50%;
+}
+
 .grid-container {
   display: grid;
+  text-align: center;
   grid-template-columns: auto auto auto auto auto auto;
   grid-gap: 25px;
   background-color: rgba(255, 255, 255, 0.0);
   justify-content: center; 
+  padding-bottom: 25px;
 }
 
 .button {
@@ -40,6 +51,13 @@
   box-shadow: 0 9px #999;
   margin-left: 1%;
   margin-top: 2%;
+}
+.cart {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: auto;
+  height: auto;
 }
 
 .button:hover {background-color: #3e8e41}

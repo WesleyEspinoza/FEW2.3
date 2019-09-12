@@ -39,7 +39,6 @@ class PageContent extends React.Component {
     return (
       <div className="PageContent">
         {projects}
-
       </div>
       );
   }
