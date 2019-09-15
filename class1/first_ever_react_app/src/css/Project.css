@@ -6,16 +6,18 @@
   height: auto;
   padding: 2%;
   color: rgb(15, 4, 54);
-  background-color:  rgb(35, 30, 109); /*From here..*/
+  background-color:#6bc5d2;
   box-shadow: 0 10px rgba(49, 49, 49, 0.253);
-
+  -webkit-transition: width 1s; /* Safari prior 6.1 */
+  transition: width 1s;
   text-align: center;
   cursor: pointer;
 }
 .card:hover{
   box-shadow: 0 15px rgba(49, 49, 49, 0.253);
-  border-width: 4px;
-  scale: 2;
+  background-color:#b5525c;
+  width: 475px;
+
 }
 
 .p { 

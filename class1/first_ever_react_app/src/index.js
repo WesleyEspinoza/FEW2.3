@@ -5,9 +5,11 @@ import './css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import PageContent from './PageContent'
+import HeaderComponent from './HeaderComponent';
 
 const routing = (
     <Router>
+        <HeaderComponent />
         <div>
             <Route path="/" component={App}/>
             <Route path="/repos" component={PageContent}/>

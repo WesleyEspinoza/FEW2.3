@@ -29,9 +29,6 @@ class ProjectsPageContent extends React.Component {
         return (
           <Project key={`project-${id}`} title={name} language={language} link={html_url} />
         )
-
-  
-        
       });
     }
     
