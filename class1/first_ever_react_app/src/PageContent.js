@@ -2,7 +2,7 @@ import React from 'react'
 import './css/App.css';
 import Project from './Project';
 
-class PageContent extends React.Component {
+class ProjectsPageContent extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -45,4 +45,4 @@ class PageContent extends React.Component {
 
 }
 
-export default PageContent;
+export default ProjectsPageContentcd;

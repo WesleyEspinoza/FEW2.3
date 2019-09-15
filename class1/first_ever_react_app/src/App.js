@@ -3,15 +3,13 @@ import React from 'react';
 import HeaderComponent from './HeaderComponent'
 import PageContent from './PageContent'
 import './css/App.css';
+import HomePageContent from './HomePageContent';
 
 
 
 function App() {
   return (
-    <div className="App-header">
-      <HeaderComponent />
-      <PageContent />
-    </div>
+    <HomePageContent />
   );
 }
 

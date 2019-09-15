@@ -1,0 +1,41 @@
+.Button {
+    background-color: #6bc5d2;
+    border: none;
+    color: #105e62;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 15px;    
+}
+
+.Button:hover{
+    background-color: #b5525c;
+}
+
+.Name{
+    margin-top: 20%;
+    color: #105e62;
+    margin-bottom: 15px;
+}
+
+
+.ButtonContainer {
+    display: inline;
+    text-align: center;
+}
+
+
+.MainContent{
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    background-color: #d2fafb;
+    position: absolute;
+    top: 0px; /* Header Height */
+    bottom: 0px; /* Footer Height */
+    width: 100%;
+     
+}

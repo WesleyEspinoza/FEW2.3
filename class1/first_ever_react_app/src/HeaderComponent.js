@@ -5,9 +5,12 @@ function HeaderComponent() {
   //logic
   return (
     <div className="HeaderComponent">
-      <header>
-      <h1>Erick Wesley Espinoza</h1>
-      </header>
+      <div className="Header">
+        <a href="#home">Home </a>
+        <a href="#about">About </a>
+        <a href="#resume">Resume </a>
+         Erick Wesley Espinoza
+      </div>
     </div>
   ); // returns the view
 }
