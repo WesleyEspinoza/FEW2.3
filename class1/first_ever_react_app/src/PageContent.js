@@ -45,4 +45,4 @@ class ProjectsPageContent extends React.Component {
 
 }
 
-export default ProjectsPageContentcd;
+export default ProjectsPageContent;
