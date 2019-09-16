@@ -25,10 +25,23 @@ class ProjectsPageContent extends React.Component {
   render(){
     var projects = []
     if(this.state && this.state.data){
-      projects = this.state.data.map(({id, name, language, html_url}, index) => {
-        return (
-          <Project key={`project-${id}`} title={name} language={language} link={html_url} />
-        )
+      projects = this.state.data.map(({id, name, language, html_url, description}, index) => {
+
+        var words = []
+        var project = undefined
+
+        if (description) {
+          words =description.split(" ");
+
+        if (words[words.length - 1 ] === "[{--Port--}]"){
+          
+            project = <Project key={`project-${id}`} title={name} language={language} link={html_url} />
+          
+        } 
+      }
+
+      return project
+
       });
     }
     

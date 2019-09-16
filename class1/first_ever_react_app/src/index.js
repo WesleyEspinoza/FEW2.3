@@ -4,15 +4,15 @@ import {Route, HashRouter as Router} from 'react-router-dom'
 import './css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import PageContent from './PageContent'
 import HeaderComponent from './HeaderComponent';
+import ProjectsPageContent from './ProjectPageContent';
 
 const routing = (
     <Router>
         <HeaderComponent />
         <div>
             <Route path="/" component={App}/>
-            <Route path="/repos" component={PageContent}/>
+            <Route path="/repos" component={ProjectsPageContent}/>
         </div>
     </Router>
 ) 
