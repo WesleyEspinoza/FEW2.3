@@ -23,20 +23,23 @@ class ProjectsPageContent extends React.Component {
   }
 
   render(){
-    var projects = []
+    var inProgProjects = []
+    var futureProjects = []
+    var finishedProjects = []
     if(this.state && this.state.data){
-      projects = this.state.data.map(({id, name, language, html_url, description}, index) => {
+      finishedProjects = this.state.data.map(({id, name, language, html_url, description}, index) => {
 
         var words = []
         var project = undefined
 
         if (description) {
           words =description.split(" ");
-
-        if (words[words.length - 1 ] === "[{--Port--}]"){
-          
-            project = <Project key={`project-${id}`} title={name} language={language} link={html_url} />
-          
+        if (words[words.length - 1 ] === "[{--Cur--}]"){
+          inProgProjects.push( <Project key={`project-${id}`} title={name} language={language} link={html_url} />)
+        } else if (words[words.length - 1 ] === "[{--Updt--}]"){
+          futureProjects.push( <Project key={`project-${id}`} title={name} language={language} link={html_url} />)
+        } else if (words[words.length - 1 ] === "[{--Fin--}]"){
+          project = <Project key={`project-${id}`} title={name} language={language} link={html_url} />
         } 
       }
 
@@ -48,7 +51,19 @@ class ProjectsPageContent extends React.Component {
 
     return (
       <div className="PageContent">
-        {projects}
+        <h1 className="Title">Currently Working on</h1>
+      
+        <div className="ProjectsGrid">
+          {inProgProjects}
+        </div>
+        <h1>Will Update</h1>
+        <div className="ProjectsGrid">
+          {futureProjects}
+        </div>
+        <h1>No Future plans</h1>
+        <div className="ProjectsGrid">
+          {finishedProjects}
+        </div>
       </div>
       );
   }

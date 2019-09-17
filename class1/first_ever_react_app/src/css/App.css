@@ -4,7 +4,7 @@
 }
 .PageContent {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     grid-gap: 25px;
     justify-content: center; 
     padding-bottom: 25px;
@@ -18,9 +18,31 @@
     bottom: 0px; /* Footer Height */
     width: 100%;
 }
+.ProjectsGrid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 25px;
+  justify-content: center; 
+  padding-bottom: 25px;
+  grid-column: 4;
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  background-color: #d2fafb;
+  position: relative;
+  top: 0px; /* Header Height */
+  bottom: 0px; /* Footer Height */
+  width: 100%;
+}
 
 .image {
   flex: 1;
+}
+.Title{
+  color: #105e62;
+  display: flex;
+  position: relative;
+  margin-bottom: 25%;
 }
 
 .App-logo {
