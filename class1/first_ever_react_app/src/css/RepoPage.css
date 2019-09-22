@@ -1,9 +1,9 @@
 .card {
-  display:block;
+  display:flex;
   margin:auto;
   color: black;
   width: 350px;
-  height: auto;
+  height: 250px;
   padding: 2%;
   color: rgb(15, 4, 54);
   background-color:#6bc5d2;
@@ -12,6 +12,8 @@
   transition: width 1s;
   text-align: center;
   cursor: pointer;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 .card:hover{
   box-shadow: 0 15px rgba(49, 49, 49, 0.253);

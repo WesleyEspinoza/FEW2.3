@@ -5,17 +5,17 @@ import './css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import HeaderComponent from './HeaderComponent';
-import ProjectsPageContent from './ProjectPageContent';
+import RepoPageContent from './RepoPageContent';
 
 const routing = (
-    <Router>
-        <HeaderComponent />
-        <div>
-            <Route path="/" component={App}/>
-            <Route path="/repos" component={ProjectsPageContent}/>
-        </div>
-    </Router>
-) 
+  <Router>
+    <HeaderComponent />
+    <div>
+      <Route path="/" component={App}/>
+      <Route path="/repos" component={RepoPageContent}/>
+    </div>
+  </Router>
+);
 
 ReactDOM.render(routing, document.getElementById('root'));
 

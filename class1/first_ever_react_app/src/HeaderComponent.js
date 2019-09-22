@@ -1,8 +1,12 @@
-import React from 'react'
-import './css/HeaderComponent.css'
-
+// eslint-disable-next-line
+import React from 'react';
+import './css/HeaderComponent.css';
+/**
+ * setup the header component.
+ * @return {div}
+ */
 function HeaderComponent() {
-  //logic
+  // logic
   return (
     <div className="HeaderComponent">
       <div className="Header">
@@ -14,6 +18,5 @@ function HeaderComponent() {
     </div>
   ); // returns the view
 }
-
 
 export default HeaderComponent;
